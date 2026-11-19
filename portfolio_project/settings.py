@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security
 SECRET_KEY = os.environ.get(
-    "SECRET_KEY",
+    "d6)77=naho!*wkx*1^z5)17%3gq*o-9(8i^h+5*3m0s@jn8!uy",
     "django-insecure-local-development-key-only"
 )
 
