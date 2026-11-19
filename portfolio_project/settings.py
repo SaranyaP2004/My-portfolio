@@ -1,9 +1,13 @@
+
 import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Security
+# ==========================================
+# SECURITY SETTINGS
+# ==========================================
+
 SECRET_KEY = os.environ.get(
     "SECRET_KEY",
     "django-insecure-local-development-key-only"
@@ -21,7 +25,10 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.vercel.app",
 ]
 
-# Applications
+# ==========================================
+# APPLICATIONS
+# ==========================================
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -32,7 +39,10 @@ INSTALLED_APPS = [
     "portfolio",
 ]
 
-# Middleware
+# ==========================================
+# MIDDLEWARE
+# ==========================================
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -44,9 +54,16 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# ==========================================
+# URL CONFIGURATION
+# ==========================================
+
 ROOT_URLCONF = "portfolio_project.urls"
 
-# Templates
+# ==========================================
+# TEMPLATE CONFIGURATION
+# ==========================================
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -65,7 +82,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "portfolio_project.wsgi.application"
 
-# Database
+# ==========================================
+# DATABASE CONFIGURATION
+# ==========================================
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -73,16 +93,28 @@ DATABASES = {
     }
 }
 
-# Password validation
+# ==========================================
+# PASSWORD VALIDATION
+# ==========================================
+
 AUTH_PASSWORD_VALIDATORS = []
 
-# Internationalization
+# ==========================================
+# LANGUAGE AND TIME
+# ==========================================
+
 LANGUAGE_CODE = "en-us"
+
 TIME_ZONE = "Asia/Kolkata"
+
 USE_I18N = True
+
 USE_TZ = True
 
-# Static files configuration
+# ==========================================
+# STATIC FILES CONFIGURATION
+# ==========================================
+
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
@@ -99,5 +131,9 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+# ==========================================
+# DEFAULT PRIMARY KEY
+# ==========================================
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
