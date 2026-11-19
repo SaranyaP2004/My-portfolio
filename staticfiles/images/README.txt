@@ -1,0 +1,1 @@
+Add your own profile.jpg, manufacturing.png and flower-shop.png here when you have screenshots/photos.
