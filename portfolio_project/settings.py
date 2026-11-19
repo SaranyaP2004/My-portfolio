@@ -3,12 +3,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "change-this-development-key-before-deployment"
 
-DEBUG = False
-
-ALLOWED_HOSTS = [
-    "my-portfolio-xi-pearl-42.vercel.app",
-]
-
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -67,6 +61,16 @@ CSRF_TRUSTED_ORIGINS = [
     "https://my-portfolio-xi-pearl-42.vercel.app",
 ]
 
+
+
 import os
 
-SECRET_KEY = os.environ.get("6)77=naho!*wkx*1^z5)17%3gq*o-9(8i^h+5*3m0s@jn8!uy")
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    ".vercel.app",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.vercel.app",
+]
